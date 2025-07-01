@@ -6,6 +6,7 @@ router.get("/", async (req, res) => {
   try {
     const trips = await Trip.find();
     res.json({ result: true, trips });
+    console.log(trips);
   } catch (error) {
     res.status(500).json({ result: false, error: error.message });
   }
