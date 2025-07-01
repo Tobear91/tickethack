@@ -6,13 +6,39 @@
     <title>TicketHack</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+<header>
+    <a href="index.html">
+        <button>Tickethack</button>
+      </a>
+      <a href="cart.html">
+        <button>Cart</button>
+      </a>
+      <a href="booking.html">
+        <button>Booking</button>
+      </a>
+
+</header>
 <body>
-    <div class="searchTrain">
-        <input id="Departure" type="text" placeholder="Departure" />
-        <input id="Arrival" type="text" placeholder="Arrival" />
-        <input id="Date" type="date" placeholder="JJ/MM/AAAA>
-        <button id="addCity"><img id="glass" src="images/glass.png" /></button>
-    </div>
+
+<form action="travelForm" method="post">
+    <ul>
+        <li>
+            <label for="Departure"></label>
+            <input type="text" id="Departure" name="Departure" placeholder="Departure" />
+        </li>
+        <li>
+            <label for="arrival"></label>
+            <input type="text" id="Arrival" name="Arrival" placeholder="Arrival"/>
+        </li>
+        <li>
+            <input id="Date" type="date" placeholder="JJ/MM/AAAA>">
+        </li>
+        </ul>
+        <div class="button">
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
 
 <script src="script.js"></script>
 </body>
