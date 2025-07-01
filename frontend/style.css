@@ -8,73 +8,103 @@ background-size: cover;
 align-items: centergit;
 }
 
-form {
-    /* On centre le formulaire */
+header {
+    display: flex;
+    background-color: white;
+    width: 100vw;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#HomePage{
+    height: 70%;
+    
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    gap: 40px;
+}
+
+#travelForm {
+
     margin: 0 auto;
-    width: 400px;
-    /* Le contour du formulaire */
+    width: 30%;
+    height: 400px;
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
     background-color: white;
     text-align: center;
+    justify-content: center;
+    box-shadow: 1px;
+}
+
+#displayTravel{
+    display: flex;
+    width: 30%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#timeToBook {
+    font-size: 10px;
+}
+
+#logoTrain{
+
+    width: 50%;
+
 }
 
 ul {
     list-style: none;
 }
 
-form li + li {
+form li + li +  {
     margin-top: 1em;
 }
 
 label {
-    /* Taille et alignement uniformes */
     display: inline-block;
-    width: 90px;
+    width: 90%;
     text-align: right;
-  }
-  
-  input,
-  textarea {
-    /* On s'assure que les champs texte ont la même police
-       Par défaut, les zones de texte ont une police à chasse
-       fixe. */
+}
+
+input,
+textarea {
+    display: flex;
     font: 1em sans-serif;
-  
-    /* Taille uniforme pour des champs */
-    width: 300px;
+    width: 100%;
     box-sizing: border-box;
-  
-    /* On utilise la même bordure que pour le formulaire */
     border: 1px solid #999;
-  }
-  
-  input:focus,
-  textarea:focus {
-    /* On rajoute une mise en avant pour les éléments avec
-       le focus. */
+}
+
+input:focus,
+textarea:focus {
     border-color: #000;
-  }
-  
-  textarea {
-    /* On aligne les textes sur plusieurs lignes avec leur
-       libellé. */
+}
+
+textarea {
     vertical-align: top;
-  
-    /* On fournit un peut d'espace pour saisir du texte. */
     height: 5em;
-  
-    /* On permet de redimensionner verticalement. */
     resize: vertical;
-  }
-  
-  .button {
-    /* On aligne les boutons avec les champs texte. */
- /* La même taille que les libellés */
-  }
-  
+}
+
+
+
 button {
-    margin-left: 0.5em;
-  }
-  
+    
+}
