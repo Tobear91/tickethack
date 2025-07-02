@@ -31,7 +31,7 @@ document.querySelector(".button").addEventListener("click", function () {
         Travels.innerHTML = `
             <div class= "divNotFound">
             <img src="../assets/images/notfound.png" class="logoNotFound"/>
-            <div class="separator"></div>:q
+            <div class="separator"></div>
             <h1 id="timeToBook">No trip found.</h1>
             </div>
             `;

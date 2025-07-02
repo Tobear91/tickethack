@@ -11,4 +11,13 @@ router.post("/", (req, res) => {
   });
 });
 
+router.get("/", (req, res) => {
+  Booking.find()
+    .populate("trip")
+    .then((bookings) => {
+      const sorted = bookings.sort((a, b) => new Date(a.trip.date) - new Date(b.trip.date));
+      res.json({ result: true, bookings: sorted });
+    });
+});
+
 module.exports = router;

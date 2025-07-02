@@ -93,5 +93,6 @@ function addBooking(trip_id) {
 
     // Supprime tous les élements dans la collection carts
     deleteAllCarts();
+    window.location.assign("http://127.0.0.1:5500/frontend/views/booking.html");
   });
 })();
