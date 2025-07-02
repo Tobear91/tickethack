@@ -51,6 +51,7 @@ document.querySelector(".button").addEventListener("click", function () {
       }
 
       const allButtonBook = document.querySelectorAll(".buttonBook");
+
       allButtonBook.forEach((button, index) => {
         button.addEventListener("click", () => {
           const trip_id = data.trips[index]._id;
@@ -59,33 +60,8 @@ document.querySelector(".button").addEventListener("click", function () {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ trip_id }),
           });
-          window.location.assign("http://192.168.1.15:5500/frontend/cart.html");
+          window.location.assign("http://127.0.0.1:5500/frontend/views/cart.html");
         });
-      });
-
-      for (let Y of allButtonBook) {
-      }
-
-      document.querySelector(".buttonBook").addEventListener("click", function () {
-        //     const departure = document.querySelector('#Departure').value;
-        //     const arrival = document.querySelector('#Arrival').value;
-        //     const date = document.querySelector('#Date').value;
-
-        // fetch('http://localhost:3000/trips:Id', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ departure, arrival, date }),
-        //     })
-        // .then(response => response.json())
-        // .then(data => {
-        //     const cartTravels = document.querySelector('#cart.html')
-        //     console.log(data)
-        //     cartTravels.innerHTML += `
-
-        //     `;
-
-        // })
-        console.log("coucou");
       });
     });
 });
