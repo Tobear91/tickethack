@@ -17,6 +17,30 @@ async function deleteCart(id) {
   return data;
 }
 
+// Supprime toutes les cartes
+function deleteAllCarts() {
+  const url = "http://localhost:3000/carts";
+  fetch(url, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // A modifier en fonction de la bonne URL
+      window.location.assign("http://192.168.1.15:5500/frontend/booking.html");
+    });
+}
+
+// Ajoute un booking
+function addBooking(trip_id) {
+  const url = "http://localhost:3000/bookings";
+
+  fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ trip_id }),
+  }).then((response) => response.json());
+}
+
 (async () => {
   const list_carts = document.querySelector("#list_carts");
   const total_span = document.querySelector("#total span");
@@ -26,8 +50,9 @@ async function deleteCart(id) {
 
   // Boucle sur les carts pour les ajouter dans le DOM
   carts.forEach((cart) => {
-    const { departure, arrival, price, date } = cart.trip;
+    const { _id, departure, arrival, price, date } = cart.trip;
     const clone = cloneElement(".cart");
+    clone.querySelector(".trip_id").textContent = `${_id}`;
     clone.querySelector(".trajet").textContent = `${departure} > ${arrival}`;
     clone.querySelector(".heure").textContent = `${moment(date).format("HH:MM")}`;
     clone.querySelector(".prix").textContent = `${price}€`;
@@ -54,4 +79,19 @@ async function deleteCart(id) {
 
   // Affichage du total
   total_span.textContent = total;
+
+  // Click sur purchase
+  const buttonPurchase = document.querySelector("#total button");
+  buttonPurchase.addEventListener("click", () => {
+    const carts_trip = document.querySelectorAll(".cart_trip");
+
+    // Ajout un par un, un trip élément dans la collection bookings
+    carts_trip.forEach((cart) => {
+      const trip_id = cart.querySelector("span").textContent;
+      addBooking(trip_id);
+    });
+
+    // Supprime tous les élements dans la collection carts
+    deleteAllCarts();
+  });
 })();

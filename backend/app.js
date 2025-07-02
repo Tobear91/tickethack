@@ -9,6 +9,7 @@ const cors = require("cors");
 
 const tripsRouter = require("./routes/trips");
 const cartsRouter = require("./routes/carts");
+const bookingsRouter = require("./routes/bookings");
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/trips", tripsRouter);
 app.use("/carts", cartsRouter);
+app.use("/bookings", bookingsRouter);
 
 module.exports = app;

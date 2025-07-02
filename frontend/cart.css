@@ -31,7 +31,8 @@ body {
   margin-bottom: 10px;
 }
 
-#carts .cart.ghost {
+#carts .cart.ghost,
+#carts .cart .trip_id {
   display: none;
 }
 
