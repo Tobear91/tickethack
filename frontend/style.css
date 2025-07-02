@@ -262,7 +262,7 @@ h1{
     width: 30px;
 }
 
-#buttonBook {
+.buttonBook {
     float: right;
     background-color: #4ea891;
     color: white;
