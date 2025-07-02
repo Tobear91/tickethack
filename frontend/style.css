@@ -1,288 +1,336 @@
-body {
-margin: 0;
-background-image: url(images/background.jpg);
-width: 100%;
-height: 100%;
-justify-items: center;
-background-size: cover;
-align-items: centergit;
+#bodyINDEX {
+  margin: 0;
+  background-image: url(images/background.jpg);
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  background-size: cover;
+  align-items: centergit;
 }
 
 /* Header */
 
 header {
-    background-color: white;
-    width: 100vw;
-    height: 40px;
-    justify-content: space-around;
-    align-items: center;
-    
+  background-color: white;
+  height: 40px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.headerGrid{
-    margin-top: 0;
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    list-style: none;
-    padding: 7px;
-    padding-left: 25px;
+.headerGrid {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  list-style: none;
+  padding: 7px;
+  padding-left: 25px;
 }
 
-#HomePage{
-color: #4ea891;
-background-color: white;
-border: none;
-font-size: 25px;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: bold;
+#HomePage {
+  color: #4ea891;
+  background-color: white;
+  border: none;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
-
-#cart{
-    background-color: white;
-    border: none;
-    text-decoration: none;
-    grid-column: 15 / 16;
-    justify-self: center;
-    align-self: center; 
+#cart {
+  background-color: white;
+  border: none;
+  text-decoration: none;
+  grid-column: 15 / 16;
+  justify-self: center;
+  align-self: center;
 }
 
-#logoTicketHack{
-    justify-self: center;
-    align-self: center; 
+#logoTicketHack {
+  justify-self: center;
+  align-self: center;
 }
 
-#booking{
-    background-color: white;
-    border: none;
+#booking {
+  background-color: white;
+  border: none;
 }
 
-#HomePage{
-    height: 70%;
-    
+#HomePage {
+  height: 70%;
 }
 
 /* Titles */
 
-h5{
-    margin-top: 44px;
-    color: white;
-    font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-bottom: 17px;
+h5 {
+  margin-top: 44px;
+  color: white;
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 17px;
 }
 
-h6{
-    color: white;
-    font-size: 19px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: lighter;
-    margin: 0;
+h6 {
+  color: white;
+  font-size: 19px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+  margin: 0;
 }
-
 
 /* Both Floating bloc */
 
-#container{
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    height: 100%;
-    scale: 123%;
-    gap: 146px;
-
+#container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  height: 100%;
+  scale: 123%;
+  gap: 146px;
 }
 /* Floating Left Block */
 
 #travelForm {
-    display: flex;
-    margin: 0 auto;
-    width: 40%;
-    height: 300px;
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
-    background-color: white;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 1px;
+  display: flex;
+  margin: 0 auto;
+  width: 40%;
+  height: 300px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 1px;
 }
 
 #grid-list {
-    margin-top: 0;
-    display: grid;
-    grid-template-rows: repeat(8, 1fr);
-    list-style: none;
-    padding: 0;
-    height: 90%;
+  margin-top: 0;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  list-style: none;
+  padding: 0;
+  height: 90%;
 }
 
-#btnSearch{
-    color: white;
-    background-color: #4ea891;
+#btnSearch {
+  color: white;
+  background-color: #4ea891;
 }
 
-li{
-    font-size: 12px;
+li {
+  font-size: 12px;
 }
 
-#Departure{
-    height: 102%;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+#Departure {
+  height: 102%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#Arrival{
-    height: 102%;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+#Arrival {
+  height: 102%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .separator {
-    height: 1px;
-    background-color: #4ea891;
-    width: 80%;
-    margin: 1em 0;
-  }
-
-#Date{
-    height: 100%;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 1px;
+  background-color: #4ea891;
+  width: 80%;
+  margin: 1em 0;
 }
 
-.liDepart{
-    grid-row: 1;
+#Date {
+  height: 100%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.liArrival{
-    grid-row: 2;
+.liDepart {
+  grid-row: 1;
 }
 
-.liDate{
-    grid-row: 4;
+.liArrival {
+  grid-row: 2;
+}
+
+.liDate {
+  grid-row: 4;
 }
 
 /* Custom Date Form */
-
 input,
 textarea {
-    font: 1em sans-serif;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #999;
-    background-color: #f2f3f3;
-    justify-content: space-around;
-    justify-self: center;
-    align-self: center;
+  font: 1em sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  background-color: #f2f3f3;
+  justify-content: space-around;
+  justify-self: center;
+  align-self: center;
 }
-
-
 
 /* Bloc Droite Défault */
 
-#displayTravel{
-    display: flex;
-    height: 300px;
-    margin: 0 auto;
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
-    background-color: white;
-    flex-direction: column;
-    overflow-y: scroll;
+#displayTravel {
+  display: flex;
+  height: 300px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  background-color: white;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
-#trainIcon{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+#trainIcon {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.divNotFound{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
+.divNotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
-.logoNotFound{
-    display: flex;
-    margin: 0 auto;
-    width: 40%;
-    justify-content: center;
-    align-items: center; 
+.logoNotFound {
+  display: flex;
+  margin: 0 auto;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
 }
 
 #timeToBook {
-    font-size: 10px;
-    text-align: center;
+  font-size: 10px;
+  text-align: center;
 }
 
-#logoTrain{
-    margin: 0 auto;
-    width: 40%;
-    justify-self: center;
-    align-self: center; 
+#logoTrain {
+  margin: 0 auto;
+  width: 40%;
+  justify-self: center;
+  align-self: center;
 }
 
 /* Bloc Retour Voyages */
-#responseTravel{
-    display: flex;
-    background-color: #f2f3f3;
-    margin: 5px;
-    border-radius: 2px;
-    float: right;
-    justify-content: space-around;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px;
-    font-size: 9px;
-
+#responseTravel {
+  display: flex;
+  background-color: #f2f3f3;
+  margin: 5px;
+  border-radius: 2px;
+  float: right;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  font-size: 9px;
 }
 
-#buttonB{
-    width: 30px;
+#buttonB {
+  width: 30px;
 }
 
 .buttonBook {
-    float: right;
-    background-color: #4ea891;
-    color: white;
-    border-radius: 3px;
-    margin-right: 7px;
-    font-size: 10px;
-    border: none;
+  float: right;
+  background-color: #4ea891;
+  color: white;
+  border-radius: 3px;
+  margin-right: 7px;
+  font-size: 10px;
+  border: none;
 }
 
+/* Booking.html */
 
+#bookedContainer {
+  display: flex;
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f3f3;
+}
 
+#bookedList {
+  justify-self: center;
+  width: 70%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  list-style: none;
+  padding: 20px;
+  height: 30%;
+  background-color: white;
+}
 
-/* Grid Response Travels */
+#mybook {
+  margin-top: 1%;
+  margin-bottom: 3%;
+  justify-self: center;
+  align-self: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
+#enjoy {
+  margin-top: 1%;
+  margin-bottom: 5%;
+  justify-self: center;
+  align-self: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #4ea891;
+}
 
+.separatorBooked {
+  justify-self: center;
+  align-self: center;
+  height: 1px;
+  background-color: #4ea891;
+  width: 60%;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
 
-
-
-
-
-
-
-
+#bookedTrip {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-around;
+  background-color: #f7f1f0;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

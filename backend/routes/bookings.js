@@ -11,4 +11,12 @@ router.post("/", (req, res) => {
   });
 });
 
+router.get("/", (req, res) => {
+  Booking.find()
+    .populate("trip")
+    .then((bookings) => {
+      res.json({ result: true, bookings });
+    });
+});
+
 module.exports = router;
