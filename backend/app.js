@@ -8,6 +8,7 @@ const logger = require("morgan");
 const cors = require("cors");
 
 const tripsRouter = require("./routes/trips");
+const cartsRouter = require("./routes/carts");
 
 const app = express();
 
@@ -19,5 +20,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/trips", tripsRouter);
+app.use("/carts", cartsRouter);
 
 module.exports = app;

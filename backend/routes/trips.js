@@ -22,12 +22,23 @@ router.post("/", async (req, res) => {
       throw new Error("Missing or empty fields");
 
     const { departure, arrival, date } = req.body;
-    const $gte = moment.utc(date, "YYYY-MM-DD").startOf("day").toDate();
+    const now = moment.utc();
+
+    const $gte = moment
+      .utc(date, "YYYY-MM-DD")
+      .set({
+        hour: now.hour(),
+        minute: now.minute(),
+        second: now.second(),
+        millisecond: now.millisecond(),
+      })
+      .toDate();
+
     const $lte = moment.utc(date, "YYYY-MM-DD").endOf("day").toDate();
 
     const trips = await Trip.find({
-      departure,
-      arrival,
+      departure: { $regex: new RegExp(departure, "i") },
+      arrival: { $regex: new RegExp(arrival, "i") },
       date: {
         $gte,
         $lte,
