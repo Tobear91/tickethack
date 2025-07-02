@@ -4,9 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../assets/css/cart.css" />
   </head>
   <body>
+    <header class="headerGrid">
+      <div id="logoTicketHack">
+        <a href="../index.html">
+          <button id="HomePage">Tickethack</button>
+        </a>
+      </div>
+      <div id="cart">
+        <a href="cart.html">
+          <button id="cart">Cart</button>
+        </a>
+      </div>
+      <div id="booking">
+        <a href="booking.html">
+          <button id="booking">Booking</button>
+        </a>
+      </div>
+    </header>
     <section id="carts">
       <h1>My Cart</h1>
       <div id="list_carts">
@@ -15,15 +33,15 @@
           <p class="trajet"></p>
           <p class="heure"></p>
           <p class="prix"></p>
-          <button>X</button>
+          <button class="button">X</button>
         </div>
       </div>
       <div id="total">
         <p>Total : <span>0</span>€</p>
-        <button>Purchase</button>
+        <button class="button">Purchase</button>
       </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="cart.js" type="module"></script>
+    <script src="../assets/js/cart.js" type="module"></script>
   </body>
 </html>

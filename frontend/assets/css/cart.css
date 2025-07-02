@@ -1,7 +1,28 @@
+/* Surcharge */
 body {
-  background-color: #f2f3f3;
+  height: 100vh;
+  background-color: #eef1f0;
+  background-image: none;
   margin: 0;
   padding: 0;
+}
+
+.headerGrid {
+  padding: 7px 0;
+}
+
+.headerGrid button {
+  cursor: pointer;
+}
+
+/* Fin Surcharge */
+
+.button {
+  background-color: #4ea890;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
 }
 
 #carts {
@@ -42,9 +63,10 @@ body {
   justify-content: end;
 }
 
-#carts .cart button {
-  background-color: #4ea890;
-  cursor: pointer;
+#carts .cart .button {
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 
 #total {
@@ -58,6 +80,6 @@ body {
   padding: 0 50px;
 }
 
-#total button {
-  background-color: #4ea890;
+#total .button {
+  padding: 5px 15px;
 }

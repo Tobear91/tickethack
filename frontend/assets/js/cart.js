@@ -1,4 +1,4 @@
-import { cloneElement } from "./modules/helpers.js";
+import { cloneElement } from "../../modules/helpers.js";
 moment().format();
 
 // Récupération des carts depuis la BDD

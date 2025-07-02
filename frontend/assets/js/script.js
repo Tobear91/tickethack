@@ -30,7 +30,7 @@ document.querySelector(".button").addEventListener("click", function () {
         console.log(data);
         Travels.innerHTML = `
             <div class= "divNotFound">
-            <img src="images/notfound.png" class="logoNotFound"/>
+            <img src="../assets/images/notfound.png" class="logoNotFound"/>
             <div class="separator"></div>:q
             <h1 id="timeToBook">No trip found.</h1>
             </div>
@@ -41,9 +41,7 @@ document.querySelector(".button").addEventListener("click", function () {
       for (let X of data.trips) {
         if (data.result) {
           Travels.innerHTML += `<div id = "responseTravel">
-            <div id="newDeparture"> ${X.departure} > ${X.arrival}  ${moment(
-            X.date
-          ).format(`HH:MM`)} ${X.price}€</div>
+            <div id="newDeparture"> ${X.departure} > ${X.arrival}  ${moment(X.date).format(`HH:MM`)} ${X.price}€</div>
             <div id="buttonB">
                 <button class="buttonBook" type="submit">Book</button>
             </div>
@@ -68,28 +66,26 @@ document.querySelector(".button").addEventListener("click", function () {
       for (let Y of allButtonBook) {
       }
 
-      document
-        .querySelector(".buttonBook")
-        .addEventListener("click", function () {
-          //     const departure = document.querySelector('#Departure').value;
-          //     const arrival = document.querySelector('#Arrival').value;
-          //     const date = document.querySelector('#Date').value;
+      document.querySelector(".buttonBook").addEventListener("click", function () {
+        //     const departure = document.querySelector('#Departure').value;
+        //     const arrival = document.querySelector('#Arrival').value;
+        //     const date = document.querySelector('#Date').value;
 
-          // fetch('http://localhost:3000/trips:Id', {
-          //     method: 'POST',
-          //     headers: { 'Content-Type': 'application/json' },
-          //     body: JSON.stringify({ departure, arrival, date }),
-          //     })
-          // .then(response => response.json())
-          // .then(data => {
-          //     const cartTravels = document.querySelector('#cart.html')
-          //     console.log(data)
-          //     cartTravels.innerHTML += `
+        // fetch('http://localhost:3000/trips:Id', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify({ departure, arrival, date }),
+        //     })
+        // .then(response => response.json())
+        // .then(data => {
+        //     const cartTravels = document.querySelector('#cart.html')
+        //     console.log(data)
+        //     cartTravels.innerHTML += `
 
-          //     `;
+        //     `;
 
-          // })
-          console.log("coucou");
-        });
+        // })
+        console.log("coucou");
+      });
     });
 });
