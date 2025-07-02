@@ -26,6 +26,14 @@ header {
   padding-left: 25px;
 }
 
+.headerGrid {
+  padding: 7px 0;
+}
+
+.headerGrid button {
+  cursor: pointer;
+}
+
 #HomePage {
   color: #4ea891;
   background-color: white;
@@ -47,6 +55,7 @@ header {
 #logoTicketHack {
   justify-self: center;
   align-self: center;
+  padding-left: 25px;
 }
 
 #booking {
