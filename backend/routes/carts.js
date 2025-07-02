@@ -6,7 +6,6 @@ const Cart = require("../models/carts");
 router.get("/", async (req, res) => {
   try {
     const carts = await Cart.find().populate("trip");
-    if (carts.length === 0) throw new Error("Carts not found");
     res.json({ result: true, carts });
   } catch (error) {
     res.status(500).json({ result: false, error: error.message });
