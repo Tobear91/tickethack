@@ -6,16 +6,18 @@
     <title>TicketHack</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<header>
+<header class="headerGrid">
     <div id = "logoTicketHack">
         <a href="index.html">
             <button id="HomePage">Tickethack</button>
     </a>
     </div>
-    <div id="CartAndBooking">
+    <div id="cart">
         <a href="cart.html">
             <button id="cart">Cart</button>
         </a>
+    </div>
+    <div id="booking">
         <a href="booking.html">
             <button id="booking">Booking</button>
         </a>
@@ -23,30 +25,39 @@
 
 </header>
 <body>
+
+    <h5>Explore the world effortlessly by train!</h5>
+    <h6>Compare, book and enjoy cheap prices for train tickets your journey starts on Tickethack.</h6>
+
 <div id="container">
 
     <div id="travelForm">
-        <ul>
-            <li>
+        <ul id="grid-list">
+            
+            <li class="liDepart">
                 <label for="Departure"></label>
-                <input type="text" id="Departure" name="Departure" placeholder="Departure" />
+                <input type="text" id="Departure" name="Departure" placeholder="Departure" value="Paris"/>
             </li>
-            <li>
+            <li class="liArrival">
                 <label for="arrival"></label>
-                <input type="text" id="Arrival" name="Arrival" placeholder="Arrival"/>
+                <input type="text" id="Arrival" name="Arrival" placeholder="Arrival" value = "Lyon">
             </li>
-            <li>
+            <li class="liDate">
+                <label for="ate"></label>
                 <input id="Date" type="date" placeholder="JJ/MM/AAAA>">
             </li>
             </ul>
             <div class="button">
-                <button type="submit">Search</button>
+                <button id="btnSearch" type="submit">Search</button>
             </div>
     </div>
     
     <div id="displayTravel">
-        <img src="images/train.png" id="logoTrain"/>
-        <h1 id="timeToBook">It's time to book your future trip.</h1>
+        <div id = "trainIcon">
+            <img src="images/train.png" id="logoTrain"/>
+            <div class="separator"></div>
+            <h1 id="timeToBook">It's time to book your future trip.</h1>
+        </div>
     </div>
 
 </div>

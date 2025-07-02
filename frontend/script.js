@@ -26,24 +26,55 @@ document.querySelector('.button').addEventListener('click', function () {
 	})
     .then(response => response.json())
 	.then(data => {
-        
-	//		if (data.result) {
-	//			document.querySelector('#cityList').innerHTML += `
-	//		<div class="cityContainer">
-	//			<p class="name">${data.weather.cityName}</p>
-	//			<p class="description">${data.weather.description}</p>
-	//			<img class="weatherIcon" src="images/${data.weather.main}.png"/>
-	//			<div class="temperature">
-	//				<p class="tempMin">${data.weather.tempMin}°C</p>
-	//				<span>-</span>
-	//				<p class="tempMax">${data.weather.tempMax}°C</p>
-	//			</div>
-	//			<button class="deleteCity" id="${data.weather.cityName}">Delete</button>
-	//		</div>
-	//				`;
-	//			updateDeleteCityEventListener();
-	//			document.querySelector('#button').value = '';
-			
+        const Travels = document.querySelector('#displayTravel')
+        Travels.innerHTML = '';
+        console.log(data)
 
-		});
+        if (data.result === false){
+            console.log(data)
+            Travels.innerHTML = `
+            <div class= "divNotFound">
+            <img src="images/notfound.png" class="logoNotFound"/>
+            <div class="separator"></div>:q
+            <h1 id="timeToBook">No trip found.</h1>
+            </div>
+            `;
+            return;
+        }
+
+        for (let X of data.trips){
+            if (data.result){
+            Travels.innerHTML += `<div id = "responseTravel">
+            <div id="newDeparture"> ${X.departure} > ${X.arrival}  ${X.date} ${X.price}€</div>
+            <div id="buttonB">
+                <button id ="buttonBook" type="submit">Book</button>
+            </div>
+            </div>
+            `} 
+        }
+    });
 });
+
+
+document.querySelector('#buttonBook').addEventListener('click', function () {
+	const departure = document.querySelector('#Departure').value;
+    const arrival = document.querySelector('#Arrival').value;
+    const date = document.querySelector('#Date').value;
+
+fetch('http://localhost:3000/trips:Id', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ departure, arrival, date }),
+    })
+.then(response => response.json())
+.then(data => {
+    const cartTravels = document.querySelector('#cart.html')
+    console.log(data)
+    cartTravels.innerHTML += `
+
+    `;
+
+})
+});
+
+
